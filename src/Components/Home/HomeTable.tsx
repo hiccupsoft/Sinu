@@ -114,7 +114,7 @@ const HomeTable:FC<HomeTableProps> = (props: HomeTableProps) => {
                         <Grid item xs={1} sm={1} md={2} className="border-b md:border-0 border-customBC1 border-solid">
                             <Box className="flex flex-col justify-end items-start -mt-3 mb-3 ms:mt-0 ms:mb-0">
                             <ResponsiveTypo isMobile={isMobile}>{each.node}</ResponsiveTypo>
-                            <ResponsiveTypo isMobile={isMobile} small>{each.active}</ResponsiveTypo>
+                            <ResponsiveTypo isMobile={isMobile} small ="true">{each.active}</ResponsiveTypo>
                             </Box>
                         </Grid>
                         <Grid item xs={1} sm={1} md={3} className="border-b md:border-0 border-customBC1 border-solid" >
@@ -155,10 +155,10 @@ const HomeTable:FC<HomeTableProps> = (props: HomeTableProps) => {
                     <Grid item xs={1} sm={1} md={1} order={{xs:1, sm: 1, md: 3}}>
                         <Grid container columns={{xs:2, sm: 2, md: 1 }} spacing={{xs:3, sm:3, md:2 }}>
                             <Grid item xs={1} sm={1} md={1} >
-                                <CustomeBtn isMobile={isMobile} full onClick={()=>setOpenCreateNode(true)}>Create your Node</CustomeBtn>
+                                <CustomeBtn isMobile={isMobile} full="true" onClick={()=>setOpenCreateNode(true)}>Create your Node</CustomeBtn>
                             </Grid>
                             <Grid item xs={1} sm={1} md={1} >
-                                <CustomeBtn isMobile={isMobile} full>Pay All Node Fees</CustomeBtn>
+                                <CustomeBtn isMobile={isMobile} full="true">Pay All Node Fees</CustomeBtn>
                             </Grid>
                         </Grid>
                     </Grid>
