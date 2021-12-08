@@ -9,18 +9,12 @@ const App: React.FC = () => {
   return (
     <BrowserRouter>
       <Routes>
-        {/* {
-          _.map(Router.container, (each, index)=>{
+        {
+          _.map(Router.webRoutes, (each, index)=>{
             const Component: any = each.Component;
             return <Route path={each.path} element={Component? <Component /> : null} key={index} />
           })
         }
-        {
-          _.map(Router.Sidebar, (each, index)=>{
-            const Component: any = each.Component;
-            return <Route path={each.path} element={<Component />} key={index} />
-          })
-        } */}
       </Routes>
     </BrowserRouter>
   )
