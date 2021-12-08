@@ -18,14 +18,14 @@ const ModalButton = styled((props: any)=>(<button {...props} />))`
     border-radius: 6px;
     padding: 10px 20px;
     font-size: 20px;
-    background-color: ${props=>props.backColor};
+    background-color: ${props=>props.backcolor};
     color :${props=>props.color};
     min-width: 200px;
     @media only screen and (max-width: 770px) {
         border-radius: 6px;
         padding: 5px 10px;
         font-size: 12px;
-        background-color: ${props=>props.backColor};
+        background-color: ${props=>props.backcolor};
         color :${props=>props.color};
         min-width: 100px;
     }
@@ -108,13 +108,13 @@ export default function CreateNodePopup(props: CreateNodeProps) {
             </DialogContent>
             
             <DialogContent sx={{paddingLeft: 5, paddingRight: 20, backgroundColor: 'rgb(16, 60, 120)', overflow: 'hidden'}}>
-                <DialogContentText color="white" sx={{paddingLeft: 5}}>
+                <Box color="white" sx={{paddingLeft: 5}}>
                     <ul style={{listStyle: 'square'}}>
                         <li>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut .</li>
                         <li>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut .</li>
                         <li>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut .</li>
                     </ul>
-                </DialogContentText>
+                </Box>
             </DialogContent>
 
             <DialogContent sx={{paddingLeft: 5, paddingRight: 20, backgroundColor: 'rgb(16, 60, 120)', overflow: 'hidden' }}>
@@ -139,11 +139,11 @@ export default function CreateNodePopup(props: CreateNodeProps) {
         <DialogContent sx={{paddingLeft: 5, paddingRight: 5,paddingBottom:5, backgroundColor: 'rgb(16, 60, 120)', overflow: 'hidden'}}>
             <Box className="flex flex-row justify-between items-center">
                 <Box className="flex flex-row justify-between items-center">
-                    <ModalButton backColor="rgb(85,139,189)" color="rgb(4,40,88)" className="mr-5" >Approve SINU</ModalButton>
-                    <ModalButton color="rgb(85,139,189)" backColor="rgb(4,40,88)">Create Ethereum Node</ModalButton>
+                    <ModalButton backcolor="rgb(85,139,189)" color="rgb(4,40,88)" className="mr-5" >Approve SINU</ModalButton>
+                    <ModalButton color="rgb(85,139,189)" backcolor="rgb(4,40,88)">Create Ethereum Node</ModalButton>
                 </Box>
                 <Box className="flex flex-row justify-end items-center">
-                    <ModalButton color="rgb(85,139,189)" backColor="rgb(4,40,88)" onClick={handleClose}>Cancel</ModalButton>
+                    <ModalButton color="rgb(85,139,189)" backcolor="rgb(4,40,88)" onClick={handleClose}>Cancel</ModalButton>
                 </Box>
             </Box>
         </DialogContent>

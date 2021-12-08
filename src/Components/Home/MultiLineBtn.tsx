@@ -11,7 +11,7 @@ interface MultiLineBtnProps {
 }
 const MultiLineBtn:FC<MultiLineBtnProps> = (props: MultiLineBtnProps) => {
     return (
-        <Box className={"flex flex-col justify-start items-start rounded-md px-3 m2:px-5"} 
+        <Box className={"flex flex-col justify-start items-start rounded-md px-3 m2:px-5 py-2"} 
             sx={{backgroundColor: 'rgb(16,60,120)'}} 
             onClick={props.onClick}>
             <ResponsiveTypo mobile={props.mobile} small="true" >{props.subContent}</ResponsiveTypo>
