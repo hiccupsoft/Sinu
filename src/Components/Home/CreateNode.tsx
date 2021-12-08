@@ -35,7 +35,10 @@ const ModalButton = styled((props: any)=>(<button {...props} />))`
 const CustomDialogContent = styled((props: any)=>(<DialogContent {...props} />))`
     &::-webkit-scrollbar{
         display: none;
-    }
+    };
+    background-color: rgb(16, 60, 120);
+    outline: none;
+    border: 0;
 `
 
 

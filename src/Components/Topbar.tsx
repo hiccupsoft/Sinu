@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/alt-text */
 import Box from '@mui/material/Box'
 import {FC} from 'react'
 import useMobile from '../hooks/useMobile'
