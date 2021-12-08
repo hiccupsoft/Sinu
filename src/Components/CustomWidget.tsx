@@ -1,7 +1,7 @@
 import { styled } from '@mui/material'
 
 export const CustomeBtn = styled((props: any)=>(<button {...props} />))`
-    border-radius: 6px;
+    border-radius: 10px;
     padding: ${(props)=>props.mobile ? `5px 12px` : '10px 25px'};
     text-transform: none;
     width: ${(props)=>props.full ? `100%` : 'auto'};
@@ -21,7 +21,7 @@ export const CustomeBtn = styled((props: any)=>(<button {...props} />))`
     }};
 `
 export const LightBtn = styled((props: any)=>(<button {...props} />))`
-    border-radius: 6px;
+    border-radius: 10px;
     padding: ${(props)=>props.mobile ? `5px 12px` : '10px 25px'};
     /* font-size: ${(props)=>props.mobile ? `10px` : '20px'}; */
     text-transform: none;
@@ -46,7 +46,7 @@ export const ResponsiveTypo = styled((props: any)=>(<span {...props} />))`
 `
 export const CustomInput = styled((props: any)=>(<input {...props} />))`
     border: 1px solid rgb(4, 40, 88) !important;
-    border-radius: 6px;
+    border-radius: 10px;
     padding: 10px 15px !important;
     color: white;
     width: 300px;

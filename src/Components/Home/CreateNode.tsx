@@ -15,7 +15,7 @@ interface CreateNodeProps{
 }
 
 const ModalButton = styled((props: any)=>(<button {...props} />))`
-    border-radius: 6px;
+    border-radius: 10px;
     padding: 10px 20px;
     font-size: 20px;
     background-color: ${props=>props.backcolor};
