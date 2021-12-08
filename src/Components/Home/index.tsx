@@ -30,10 +30,10 @@ const HomeComponent: FC = () => {
                         spacing={{xs:4, sm: 4, md: 2 }}
                         columns={{xs:12, sm: 12, md: 12 }}>
                         <Grid item xs={7} sm={7} md={5} >
-                            <MultiLineBtn subContent="My Nodes" isMobile={isMobile}>5 out of 100 max</MultiLineBtn>
+                            <MultiLineBtn subContent="My Nodes" mobile={isMobile}>5 out of 100 max</MultiLineBtn>
                         </Grid>
                         <Grid item xs={5} sm={5} md={4} >
-                            <LightBtn className="w-full h-full" isMobile={isMobile}><ResponsiveTypo isMobile={isMobile} color="rgb(16, 60, 120)">Create Node</ResponsiveTypo></LightBtn>
+                            <LightBtn className="w-full h-full" mobile={isMobile}><ResponsiveTypo mobile={isMobile} color="rgb(16, 60, 120)">Create Node</ResponsiveTypo></LightBtn>
                         </Grid>
                     </Grid>
                 </Grid>
@@ -42,10 +42,10 @@ const HomeComponent: FC = () => {
                         container
                         spacing={{xs:4, sm: 4, md: 3 }}>
                         <Grid item xs={3} sm={3} md={3} sx={{width: '100%'}} >
-                            <MultiLineBtn subContent="My Node Rewards" isMobile={isMobile}>16,233.37 SINU</MultiLineBtn>
+                            <MultiLineBtn subContent="My Node Rewards" mobile={isMobile}>16,233.37 SINU</MultiLineBtn>
                         </Grid>
                         <Grid item xs={1} sm={1} md={2}  justifyContent="center">
-                            <LightBtn  className="w-full h-full" isMobile={isMobile}><ResponsiveTypo isMobile={isMobile} color="rgb(16, 60, 120)">Claim</ResponsiveTypo></LightBtn>
+                            <LightBtn  className="w-full h-full" mobile={isMobile}><ResponsiveTypo mobile={isMobile} color="rgb(16, 60, 120)">Claim</ResponsiveTypo></LightBtn>
                         </Grid>
                     </Grid>
                 </Grid>

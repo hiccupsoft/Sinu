@@ -6,7 +6,7 @@ import { ResponsiveTypo } from '../CustomWidget'
 interface MultiLineBtnProps {
     children?: any;
     subContent: string;
-    isMobile: boolean;
+    mobile: boolean;
     onClick?: ()=>void;
 }
 const MultiLineBtn:FC<MultiLineBtnProps> = (props: MultiLineBtnProps) => {
@@ -14,8 +14,8 @@ const MultiLineBtn:FC<MultiLineBtnProps> = (props: MultiLineBtnProps) => {
         <Box className={"flex flex-col justify-start items-start rounded-md px-3 m2:px-5"} 
             sx={{backgroundColor: 'rgb(16,60,120)'}} 
             onClick={props.onClick}>
-            <ResponsiveTypo isMobile={props.isMobile} small="true" >{props.subContent}</ResponsiveTypo>
-            <ResponsiveTypo isMobile={props.isMobile} small="false" >{props.children}</ResponsiveTypo>
+            <ResponsiveTypo mobile={props.mobile} small="true" >{props.subContent}</ResponsiveTypo>
+            <ResponsiveTypo mobile={props.mobile} >{props.children}</ResponsiveTypo>
         </Box>
     )
 }
