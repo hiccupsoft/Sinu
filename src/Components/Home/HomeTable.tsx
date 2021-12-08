@@ -126,7 +126,7 @@ const HomeTable:FC<HomeTableProps> = (props: HomeTableProps) => {
                         </Grid>
                         <Grid item xs={3} sm={3} md={2} className="border-b md:border-0 border-customBC1 border-solid" >
                             <LightBtn mobile={isMobile} className="h-full md:h-auto w-full md:w-full -mt-3 mb-3 ms:mt-0 ms:mb-0" >
-                                <ResponsiveTypo mobile={isMobile}>Pay Fee</ResponsiveTypo>
+                                <ResponsiveTypo mobile={isMobile} color="rgb(16,60,120)">Pay Fee</ResponsiveTypo>
                             </LightBtn>
                         </Grid>
                     </React.Fragment>
