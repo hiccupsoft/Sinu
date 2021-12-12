@@ -1,11 +1,12 @@
 import { Box, Grid, styled } from '@mui/material'
 import _ from 'lodash'
 import React from 'react'
-import {FC, useState} from 'react'
+import {FC} from 'react'
+import { useNavigate } from 'react-router'
 import "../../assets/css/home.scss"
 import useMobile from '../../hooks/useMobile'
 import { CustomeBtn, LightBtn, ResponsiveTypo } from '../CustomWidget'
-import CreateNodePopup from './CreateNode'
+// import CreateNodePopup from './CreateNode'
 
 interface HomeTableProps {
     children?: any;
@@ -95,7 +96,11 @@ const mockData = [
 
 const HomeTable:FC<HomeTableProps> = (props: HomeTableProps) => {
     const {isMobile} = useMobile()
-    const [openCreateNode, setOpenCreateNode] = useState(false)
+    const history = useNavigate()
+
+    const goto = (url: string) => () => {
+        history(url)
+    }
     const renderTable = () => {
         return <Grid container columns={{xs:3, sm: 3, md: 10 }} spacing={2}>
                         <Grid item xs={1} sm={1} md={2} justifyContent="start" alignItems="start" sx={{borderBottom: '1px solid rgb(4,40,88)'}}>
@@ -107,24 +112,24 @@ const HomeTable:FC<HomeTableProps> = (props: HomeTableProps) => {
                         <Grid item xs={1} sm={1} md={3} sx={{borderBottom: '1px solid rgb(4,40,88)'}} >
                             <ResponsiveTypo mobile={isMobile} color="rgb(4, 40, 88)">FEE DUE</ResponsiveTypo>
                         </Grid>
-                        <Grid className="border-0 md:border-b border-customBC1 border-solid" item xs={3} sm={3} md={2} >
+                        <Grid className="border-b-0 m1:border-b border-customBC1 border-solid" item xs={3} sm={3} md={2} >
                         </Grid>
             {
                 _.map(mockData, (each, id)=>{
                     return <React.Fragment key={id}>
-                        <Grid item xs={1} sm={1} md={2} className="border-b md:border-0 border-customBC1 border-solid">
+                        <Grid item xs={1} sm={1} md={2} className="border-b-0 m1:border-b border-customBC1 border-solid">
                             <Box className="flex flex-col justify-end items-start -mt-3 mb-3 ms:mt-0 ms:mb-0">
                             <ResponsiveTypo mobile={isMobile}>{each.node}</ResponsiveTypo>
                             <ResponsiveTypo mobile={isMobile} small ="true">{each.active}</ResponsiveTypo>
                             </Box>
                         </Grid>
-                        <Grid item xs={1} sm={1} md={3} className="border-b md:border-0 border-customBC1 border-solid" >
+                        <Grid item xs={1} sm={1} md={3} className="border-b-0 m1:border-b border-customBC1 border-solid" >
                             <ResponsiveTypo mobile={isMobile}>{each.reward}</ResponsiveTypo>
                         </Grid>
-                        <Grid item xs={1} sm={1} md={3} className="border-b md:border-0 border-customBC1 border-solid" >
+                        <Grid item xs={1} sm={1} md={3} className="border-b-0 m1:border-b border-customBC1 border-solid" >
                             <ResponsiveTypo mobile={isMobile}>{each.feeDue}</ResponsiveTypo>
                         </Grid>
-                        <Grid item xs={3} sm={3} md={2} className="border-b md:border-0 border-customBC1 border-solid" >
+                        <Grid item xs={3} sm={3} md={2} className="border-b border-customBC1 border-solid" >
                             <LightBtn mobile={isMobile} className="h-full md:h-auto w-full md:w-full -mt-3 mb-3 ms:mt-0 ms:mb-0" >
                                 <ResponsiveTypo mobile={isMobile} color="rgb(16,60,120)">Pay Fee</ResponsiveTypo>
                             </LightBtn>
@@ -156,7 +161,7 @@ const HomeTable:FC<HomeTableProps> = (props: HomeTableProps) => {
                     <Grid item xs={1} sm={1} md={1} order={{xs:1, sm: 1, md: 3}}>
                         <Grid container columns={{xs:2, sm: 2, md: 1 }} spacing={{xs:3, sm:3, md:2 }}>
                             <Grid item xs={1} sm={1} md={1} >
-                                <CustomeBtn mobile={isMobile} full="true" onClick={()=>setOpenCreateNode(true)}>Create your Node</CustomeBtn>
+                                <CustomeBtn mobile={isMobile} full="true" onClick={goto("/createnode")}>Create your Node</CustomeBtn>
                             </Grid>
                             <Grid item xs={1} sm={1} md={1} >
                                 <CustomeBtn mobile={isMobile} full="true">Pay All Node Fees</CustomeBtn>
@@ -165,7 +170,7 @@ const HomeTable:FC<HomeTableProps> = (props: HomeTableProps) => {
                     </Grid>
                 </Grid>
             </Box>
-            <CreateNodePopup onClose={()=>setOpenCreateNode(false)} open={openCreateNode} />
+            {/* <CreateNodePopup onClose={()=>setOpenCreateNode(false)} open={openCreateNode} /> */}
         </Box>
     )
 }

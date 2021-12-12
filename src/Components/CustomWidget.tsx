@@ -1,4 +1,6 @@
 import { styled } from '@mui/material'
+import { FC } from 'react'
+import useMobile from '../hooks/useMobile'
 
 export const CustomeBtn = styled((props: any)=>(<button {...props} />))`
     border-radius: 10px;
@@ -29,6 +31,24 @@ export const LightBtn = styled((props: any)=>(<button {...props} />))`
     /* color: rgb(16, 60, 120); */
 `
 
+// interface ResponsiveTypoProps {
+//     small?: string
+//     color?: string
+//     mobile?: boolean
+//     childrend?: any
+// }
+// export const ResponsiveTypo:FC<ResponsiveTypoProps> = (props: ResponsiveTypoProps) => {
+//     const {isMobile} = useMobile()
+//     const getFontWeight = () => {
+//         if(props.small !== "small")
+//             return isMobile ? `400` : '600'
+//         else return isMobile ? '200' : '300'
+//     }
+//     return <span style={{fontWeight: getFontWeight()}} className="text-xs m2:text-sm md:text-lg lg:text-xl ">
+//         {props.childrend}
+//     </span>
+// }
+
 export const ResponsiveTypo = styled((props: any)=>(<span {...props} />))`
     font-size: ${(props)=>{
         if(!props.small)
@@ -49,7 +69,7 @@ export const CustomInput = styled((props: any)=>(<input {...props} />))`
     border-radius: 10px;
     padding: 10px 15px !important;
     color: white;
-    width: 300px;
+    /* width: 80%; */
     background-color: rgb(16, 60, 120);
     &:focus-visible{
         border: 1px solid rgb(4, 40, 88) !important;

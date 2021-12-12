@@ -9,21 +9,8 @@ import MultiLineBtn from './MultiLineBtn'
 
 const HomeComponent: FC = () => {
     const {isMobile} = useMobile()
-    // const web = () => {
-    //     return(
-    //         <Grid container>
-
-    //         </Grid>
-    //     )
-    // }
-
-    // const mobile = () => {
-    //     return(
-
-    //     )
-    // }
     return (
-        <Box className="px-8 m2:px-24 mt-10">
+        <Box className="px-8 lg:px-36 mt-10">
             <Grid container columns={{xs:1, sm: 1, md: 12 }} spacing={{xs:2, sm: 2, md: 3 }}>
                 <Grid item xs={1} sm={1} md={7}>
                     <Grid container
